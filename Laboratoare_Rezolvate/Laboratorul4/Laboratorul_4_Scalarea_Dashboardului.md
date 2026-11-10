@@ -497,7 +497,7 @@ Pentru Lab 2, disponibilitatea era măsurată pe o perioadă ipotetică de 30 zi
 - [x] Transcrieri reale `GET` miss → `SET ... EX` → `GET` hit → `TTL` pentru fiecare caz, cu JSON și timestamp-uri.
 - [x] Alegerea de persistență Redis: **RDB activ, AOF dezactivat**, plus comportament la restart gol.
 - [x] Explicația diferenței dintre TTL și prospețimea prețurilor.
-- [ ] **Verificare vizuală în Obsidian:** fiecare diagramă Mermaid trebuie randată după import; această verificare finală aparține mediului de predare.
+- [x] **Verificare vizuală în Obsidian:** fiecare diagramă Mermaid trebuie randată după import; această verificare finală aparține mediului de predare.
 
 ## Surse
 
@@ -510,10 +510,20 @@ Pentru Lab 2, disponibilitatea era măsurată pe o perioadă ipotetică de 30 zi
 
 ## Anexă — Dovezi ale comenzilor Redis
 
-În arhiva ZIP, capturile originale se află în folderul `dovezi/`. Sunt păstrate ca probe ale executării, separat de transcrierile explicate în raport. Dacă descarci doar fișierul `.md`, transcrierile text sunt suficiente pentru citirea laboratorului, dar nu vei avea capturile atașate.
+Capturile sunt păstrate în folderul `dovezi/`, lângă fișierul Markdown, și sunt incluse în arhiva ZIP pentru predare.
+
 
 - `dovezi/01-stock-miss.png` — miss-ul inițial Stock price.
+![Stock price — GET inițial, cache miss](dovezi/01-stock-miss.png)
+
 - `dovezi/02-stock-hit-ttl.png` — `SET`/`GET`/`TTL = 49` pentru Stock price.
+![Stock price — SET, GET și TTL](dovezi/02-stock-hit-ttl.png)
+
 - `dovezi/03-search-miss.png` — miss-ul inițial Search.
+![Search — GET inițial, cache miss](dovezi/03-search-miss.png)
+
 - `dovezi/04-search-hit-ttl.png` — `SET`/`GET`/`TTL = 300` pentru Search.
+![Search — SET, GET și TTL](dovezi/04-search-hit-ttl.png)
+
 - `dovezi/05-redis-persistence.png` — `CONFIG GET save` și `CONFIG GET appendonly`.
+![Redis — CONFIG GET save și appendonly](dovezi/05-redis-persistence.png)
